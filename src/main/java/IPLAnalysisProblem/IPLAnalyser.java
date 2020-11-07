@@ -13,6 +13,15 @@ public class IPLAnalyser {
 		System.out.println("\n\nTop 5 Batting Averages");
 	    printLines(5, reader, 7);
 	    
+	    reader.sort(8);
+	    System.out.println("\n\nTop 5 Strike Rates");
+	    printLines(5, reader, 8);
+		
+		try {
+			reader.reader.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	private static void printLines(int count, IPLDataReader reader, int column) {
